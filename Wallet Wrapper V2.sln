@@ -5,6 +5,8 @@ VisualStudioVersion = 16.0.31729.503
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wallet Wrapper V2", "Wallet Wrapper V2\Wallet Wrapper V2.csproj", "{161F6478-A582-4D78-9771-CA14C0E8D961}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Example", "Example\Example.csproj", "{55B9E37F-E01F-4DD6-B731-23175D5F968C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{161F6478-A582-4D78-9771-CA14C0E8D961}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{161F6478-A582-4D78-9771-CA14C0E8D961}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{161F6478-A582-4D78-9771-CA14C0E8D961}.Release|Any CPU.Build.0 = Release|Any CPU
+		{55B9E37F-E01F-4DD6-B731-23175D5F968C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{55B9E37F-E01F-4DD6-B731-23175D5F968C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{55B9E37F-E01F-4DD6-B731-23175D5F968C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{55B9E37F-E01F-4DD6-B731-23175D5F968C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

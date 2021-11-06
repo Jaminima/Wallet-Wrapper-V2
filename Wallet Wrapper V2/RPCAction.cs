@@ -15,6 +15,8 @@ namespace Wallet_Wrapper_V2
         {
             get
             {
+                if (this._params == null) return "";
+
                 string s = "";
                 foreach (object o in this._params)
                 {
@@ -46,7 +48,7 @@ namespace Wallet_Wrapper_V2
 
         #region Constructors
 
-        public RPCAction(string _id, string _method, object[] __params)
+        public RPCAction(string _id, string _method, object[] __params = null)
         {
             this.id = _id;
             this.method = _method;
@@ -59,8 +61,13 @@ namespace Wallet_Wrapper_V2
         {
             get
             {
-                return new StringContent($"{{'jsonrpc': '{this.jsonrpc}', 'id': '{this.id}', 'method': '{this.method}', 'params': [{this.paramStr}]}}");
+                return new StringContent(this.ToString());
             }
+        }
+
+        public override string ToString()
+        {
+            return "{\"jsonrpc\": \"" + this.jsonrpc + "\", \"id\": \"" + this.id + "\", \"method\": \"" + this.method + "\", \"params\": [" + this.paramStr + "]}";
         }
     }
 }

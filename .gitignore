@@ -1,3 +1,6 @@
 ﻿.vs
 Wallet Wrapper V2/bin
 Wallet Wrapper V2/obj
+Example/bin
+Example/obj
+Example/Login.cs

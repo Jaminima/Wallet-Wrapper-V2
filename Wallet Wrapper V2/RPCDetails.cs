@@ -12,13 +12,24 @@ namespace Wallet_Wrapper_V2
 
         #endregion Fields
 
+        #region Constructors
+
+        public RPCDetails(string _username, string _password, string _url)
+        {
+            this.username = _username;
+            this.password = _password;
+            this.url = _url;
+        }
+
+        #endregion Constructors
+
         #region Properties
 
         public string base64Auth
         {
             get
             {
-                return Convert.ToBase64String(Encoding.ASCII.GetBytes($"{username}:{password}!")); ;
+                return Convert.ToBase64String(Encoding.ASCII.GetBytes($"{username}:{password}")); ;
             }
         }
 

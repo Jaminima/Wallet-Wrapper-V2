@@ -27,6 +27,11 @@ namespace Wallet_Wrapper_V2
 
         #region Methods
 
+        public void Send(RPCAction action, Action<JsonElement, object> callback, object state = null)
+        {
+            Send<JsonElement>(action, callback, state);
+        }
+
         public async void Send<T>(RPCAction action, Action<T, object> callback, object state = null)
         {
             using (var request = new HttpRequestMessage(new HttpMethod("POST"), rpcDetails.url))
@@ -49,19 +54,23 @@ namespace Wallet_Wrapper_V2
                 catch (ArgumentNullException e)
                 {
                     Console.WriteLine(e.ToString());
+                    throw e;
                 }
                 catch (InvalidOperationException e)
                 {
                     Console.WriteLine(e.ToString());
+                    throw e;
                 }
                 catch (HttpRequestException e)
                 {
                     string error = await response.Content.ReadAsStringAsync();
-                    Console.WriteLine(e.ToString());
+                    Console.WriteLine(error);
+                    throw e;
                 }
                 catch (JsonException e)
                 {
                     Console.WriteLine(e.ToString());
+                    throw e;
                 }
             }
         }
